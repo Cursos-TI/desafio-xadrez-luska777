@@ -15,7 +15,7 @@
         { printf("Movimento da Torre: \n Direita \n");
          numero++;}
 
-            
+        printf("Novo commit\n");    
 
         return 0;
     }
