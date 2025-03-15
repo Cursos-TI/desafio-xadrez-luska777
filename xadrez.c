@@ -1,26 +1,35 @@
 #include <stdio.h>
 
-    int main(){
+    void movbispo (int bispo){
+        if (bispo > 0){
+            printf("Movimento do bispo:\n Direita, cima \n");
+            movbispo(bispo - 1);
+        }}
 
-        int numero = 1, i = 1, j, k;
-
-        do {printf("Movimento da Rainha: \n Esquerda \n");
-            i++;} 
-        while (i <= 8);
-
-        for (int i = 0; i < 5; i++)
-        {printf("Movimento do Bispo: \n Cima, Direita \n");}
-        
-        while (numero <= 5)
-        { printf("Movimento da Torre: \n Direita \n");
-         numero++;}
-
-         while (j <= 2) j++;
-         { for (k = 1; k <= 2; k++)
-             printf("Movimento do Cavalo: \n Baixo \n");}
-             
-         printf("Movimento do Cavalo: \n Esquerda \n");
+    void movtorre (int torre){
+         if (torre > 0){
+            printf("Movimento do torre:\n Direita \n");
+            movtorre(torre - 1);
+        }}
+    
+    void movrainha (int rainha){
+        if (rainha > 0){
+        printf("Movimento do rainha:\n Esquerda \n");
+        movrainha(rainha - 1);
+        }}
 
 
-        return 0;
-    }
+int main(){
+
+    int j,k;
+
+    movbispo(5);
+    movtorre(5);
+    movrainha(8);
+
+ while (j <= 2) j++;
+     { for (k = 1; k <= 2; k++)
+     printf("Movimento do Cavalo: \n Cima \n");}
+     printf("Movimento do Cavalo: \n Direita \n");
+
+}
